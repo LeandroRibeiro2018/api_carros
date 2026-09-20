@@ -18,9 +18,11 @@ public class Carro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotEmpty(message = "O nome não pode ser vazio!")
     @Column(name = "nome", length = 45)
     private String nome;
 
+    @NotEmpty(message = "O modelo não pode ser vazio!")
     @Column(name ="modelo", length = 45)
     private String modelo;
 
